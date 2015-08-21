@@ -1,6 +1,7 @@
 package com.example.samuelresendez.firebase;
 
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.app.ListActivity;
 import android.database.DataSetObserver;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.firebase.client.Firebase;
 
 import java.util.ArrayList;
 
@@ -94,6 +97,9 @@ public class MainActivity extends ListActivity {
     }
     public void setupClassList() {
         String firebaseString = "https://homeworkorganizer.firebaseio.com/";
+        Firebase.setAndroidContext(this);
+
+
     }
 
     @Override
